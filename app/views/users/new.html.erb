@@ -2,5 +2,6 @@
 <%= form_for @user do |f| %>
   Name: <%= f.text_field :user_name, size: 16 %>
   Email: <%= f.text_field :email, size: 32 %>
+  Password: <%= f.password_field :password, size: 12 %>
   <div><%= f.submit %></div>
 <% end %>

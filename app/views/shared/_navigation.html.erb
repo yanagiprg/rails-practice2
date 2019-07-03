@@ -21,6 +21,26 @@
                 <%= link_to "Posts", posts_path %>
             </a>
         </li>
+
+    <% if current_user %>  
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <%= link_to current_user.user_name, users_path %>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <%= link_to "Logout", :session, method: :delete %>
+            </a>
+        </li>
+    <% else %>
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <%= link_to "Login", new_session_path %>
+        </a>
+    </li>
+<% end %>
+
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown
