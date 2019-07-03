@@ -1,0 +1,6 @@
+<h1>Edit</h1>
+<%= form_for @user do |f| %>
+  Name: <%= f.text_field :user_name, size: 16 %>
+  Email: <%= f.text_field :email, size: 32 %>
+  <div><%= f.submit %></div>
+<% end %>

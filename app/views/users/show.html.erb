@@ -1,0 +1,6 @@
+<h1>
+  <%= @user.user_name %>
+  <%= @user.email %>
+</h1>
+<h2><%= link_to "Edit", edit_user_path(@user) %></h2>
+<h2><%= link_to "Delete", user_path(@user), method: :delete %></h2>
